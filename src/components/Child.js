@@ -1,31 +1,30 @@
-// import React,{useState} from "react";
+import React,{useState} from "react";
 
 
 
-// const Child=({isLoggedIn,setIsLoggedIn})=>{
-//     let[Username,setUserName]=useState("")
-//     let[password,setPassword]=useState("")
-
-//     const logIn=()=>{
-//         if(!Username||!password){
-
-//         setIsLoggedIn("you are logged in")
-//         setIsLoggedIn(true);
-//     }
-
-//     }
+const Child=({isLoggedIn,setIsLoggedIn})=>{
+   
+    
 
 
-//     return(
+    return(
 
 
-//         <div>
+        <div>
+            {isLoggedIn===false &&
+            <div>
 
-//                    Username: <input type="text" onChange={(e)=>setUserName(e.target.value)}></input><br /><br />
+                  <label for="username">Username:</label>  
+                  <input type="text" ></input><br /><br />
 
-//                    Password: <input type="password" onChange={(e)=>setPassword(e.target.value)}></input><br /><br />
-//                   <button onClick={logIn}>Login</button>
-//         </div>
-//     )
-// }
-// export default Child;
+                  <label for="password">Password:</label>  
+
+                <input type="password"></input><br /><br />
+                  <button onClick={()=>setIsLoggedIn(true)}>Login</button>
+                  </div>
+            }
+        </div>
+            
+    )
+}
+export default Child;
